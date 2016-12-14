@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane fx:controller="sample.FXMLCalculatorController" style="-fx-font-size: 16px; -fx-font-weight: bold;"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" >
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+    <!--<gridLinesVisible>true</gridLinesVisible>-->
+    <Label fx:id="actiontarget" textAlignment="RIGHT" prefWidth="350" prefHeight="50"
+           style="-fx-border-color: black; -fx-font-weight: bold; -fx-border: 1px; -fx-font-size: 18px;"
+           GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="6" />
+
+        <Button text="+/-" fx:id="changeSign" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="7" fx:id="7" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="8" fx:id="8" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="1"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="9" fx:id="9" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="1"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="/" fx:id="division" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="1"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="√" fx:id="sqrt" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="1"
+                onAction="#handleClickOnNumberButton"></Button>
+
+
+        <Button text="→" fx:id="backspace" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="2"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="4" fx:id="4" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="5" fx:id="5" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="2"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="6" fx:id="6" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="2"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="X" fx:id="multiply" prefWidth="50" prefHeight="50" GridPane.columnIndex="4" GridPane.rowIndex="2"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="-" fx:id="minus" prefWidth="50" prefHeight="50" GridPane.columnIndex="5" GridPane.rowIndex="2"
+                onAction="#handleClickOnNumberButton"></Button>
+
+
+        <Button text="1/x" fx:id="oneDivide" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="1" fx:id="1" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="2" fx:id="2" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="3"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="3" fx:id="3" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="3"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="+" fx:id="plus" prefWidth="50" prefHeight="110" GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.rowSpan="2"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="=" fx:id="equal" prefWidth="50" prefHeight="110" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.rowSpan="2"
+                onAction="#handleClickOnNumberButton"></Button>
+
+
+        <Button text="C" fx:id="clear" prefWidth="50" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="4"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="0" fx:id="0" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="4"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="00" fx:id="00" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="4"
+                onAction="#handleClickOnNumberButton"></Button>
+        <Button text="." fx:id="point" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="4"
+                onAction="#handleClickOnNumberButton"></Button>
+</GridPane>

@@ -1,0 +1,11 @@
+ant.xml
+compiler.xml
+profiles_settings.xml
+description.html
+encodings.xml
+gradle.xml
+misc.xml
+modules.xml
+uiDesigner.xml
+vcs.xml
+workspace.xml
