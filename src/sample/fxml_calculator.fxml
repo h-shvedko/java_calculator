@@ -58,7 +58,7 @@
                 onAction="#handleClickOnNumberButton"></Button>
         <Button text="0" fx:id="0" prefWidth="50" prefHeight="50" GridPane.columnIndex="1" GridPane.rowIndex="4"
                 onAction="#handleClickOnNumberButton"></Button>
-        <Button text="00" fx:id="00" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="4"
+        <Button text="00" fx:id="doubleNull" prefWidth="50" prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="4"
                 onAction="#handleClickOnNumberButton"></Button>
         <Button text="." fx:id="point" prefWidth="50" prefHeight="50" GridPane.columnIndex="3" GridPane.rowIndex="4"
                 onAction="#handleClickOnNumberButton"></Button>
