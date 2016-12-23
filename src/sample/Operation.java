@@ -87,7 +87,7 @@ public class Operation {
                 calculator.divide();
                 break;
             case OPERATION_MULTIPLY:
-                calculator.muliply();
+                calculator.multiply();
                 break;
             case OPERATION_POINT:
                 inputNumber.point();
