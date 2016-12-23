@@ -83,6 +83,14 @@ public class InputNumber {
     }
 
     /**
+     * Getter for decimalDigitCount variable
+     * @return decimalDigitCount - value which should be set to decimalDigitCount variable
+     */
+    public int getDecimalDigitCount() {
+        return this.decimalDigitCount;
+    }
+
+    /**
      * Setter for screenValue variable
      * @param screenValue - value which should be set to screenValue variable
      */

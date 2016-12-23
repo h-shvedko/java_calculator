@@ -61,6 +61,10 @@ public class Operation {
      * Alias for action of clicking point button
      */
     private static final String OPERATION_POINT = "point";
+    /**
+     * Count of decimal values in number
+     */
+    private int decimalDigitCount;
 
     /**
      * Constructor of Operation class
@@ -115,5 +119,14 @@ public class Operation {
         double number = inputNumber.getScreenValue();
 
         return number;
+    }
+
+    /**
+     * Getter for decimalDigitCount variable
+     * @return decimalDigitCount - value which should be set to decimalDigitCount variable
+     */
+    public int getDecimalDigitCount() {
+        this.decimalDigitCount = this.inputNumber.getDecimalDigitCount();
+        return decimalDigitCount;
     }
 }

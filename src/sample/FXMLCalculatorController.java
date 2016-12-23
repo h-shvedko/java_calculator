@@ -33,6 +33,21 @@ public class FXMLCalculatorController {
         String id = x.getId();
 
         double number = this.operation.calculate(id);
-        actiontarget.setText(String.valueOf(number));
+        String str = getStringFromNumber(number);
+        actiontarget.setText(str);
+    }
+
+    /**
+     * Method which formatted our output value due to number of decimal numbers
+     * @param number - output value
+     * @return - formatted output value
+     */
+    private String getStringFromNumber(double number) {
+        String ret;
+        int numberAfterPoint = this.operation.getDecimalDigitCount();
+        String format = "%." + numberAfterPoint + "f";
+        ret = String.valueOf(String.format(format, number));
+        return ret;
+
     }
 }
