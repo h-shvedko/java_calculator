@@ -61,6 +61,16 @@ public class Calculator {
         this.input.setScreenValue((-1) * value);
     }
 
+    public void oneDivide(){
+        double value = this.input.getScreenValue();
+        this.input.setScreenValue(1 / value);
+    }
+
+    public void sqrt(){
+        double value = this.input.getScreenValue();
+        this.input.setScreenValue(Math.sqrt(value));
+    }
+
     public void executePreviousOperation() {
 
         switch(this.operation){

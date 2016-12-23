@@ -14,10 +14,6 @@ public class FXMLCalculatorController {
     public FXMLCalculatorController(){
         this.operation = new Operation();
     }
-//
-//    @FXML public void handleSubmitButtonAction(ActionEvent actionEvent) {
-//        actiontarget.setText("Sign in button pressed");
-//    }
 
     public void handleClickOnNumberButton(ActionEvent actionEvent) {
         Button x = (Button) actionEvent.getSource();
