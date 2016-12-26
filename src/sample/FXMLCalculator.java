@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class FXMLCalculator extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception{
+    public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("fxml_calculator.fxml"));
 
         Scene scene = new Scene(root, 400, 370);

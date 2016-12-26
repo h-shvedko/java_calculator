@@ -10,7 +10,8 @@ public class FXMLCalculatorController {
     /**
      * Instance of Label class
      */
-    @FXML private Label actiontarget;
+    @FXML
+    private Label actiontarget;
 
     /**
      * Instance of Operation class
@@ -20,12 +21,13 @@ public class FXMLCalculatorController {
     /**
      * Constructor of FXMLCalculatorController class
      */
-    public FXMLCalculatorController(){
+    public FXMLCalculatorController() {
         this.operation = new Operation();
     }
 
     /**
      * OnClick handler for any button of application
+     *
      * @param actionEvent - instance of ActionEvent class
      */
     public void handleClickOnNumberButton(ActionEvent actionEvent) {
@@ -39,15 +41,20 @@ public class FXMLCalculatorController {
 
     /**
      * Method which formatted our output value due to number of decimal numbers
+     *
      * @param number - output value
      * @return - formatted output value
      */
     private String getStringFromNumber(double number) {
         String ret;
         int numberAfterPoint = this.operation.getDecimalDigitCount();
+
         String format = "%." + numberAfterPoint + "f";
         ret = String.valueOf(String.format(format, number));
+
         return ret;
 
     }
+
+
 }

@@ -69,18 +69,19 @@ public class Operation {
     /**
      * Constructor of Operation class
      */
-    public Operation(){
+    public Operation() {
         this.calculator = new Calculator();
         this.inputNumber = new InputNumber(this.calculator);
     }
 
     /**
      * Method which execute action depends on given alias of action
+     *
      * @param id - alias of action
      * @return - double number result of calculation
      */
     public double calculate(String id) {
-        switch (id){
+        switch (id) {
             case OPERATION_PLUS:
                 calculator.plus();
                 break;
@@ -111,6 +112,13 @@ public class Operation {
             case OPERATION_SQRT:
                 calculator.sqrt();
                 break;
+            case OPERATION_DOUBLE_NULL:
+                inputNumber.input(0);
+                inputNumber.input(0);
+                break;
+            case OPERATION_BACKSPACE:
+                inputNumber.backspace();
+                break;
             default:
                 inputNumber.input(Integer.parseInt(id));
                 break;
@@ -123,6 +131,7 @@ public class Operation {
 
     /**
      * Getter for decimalDigitCount variable
+     *
      * @return decimalDigitCount - value which should be set to decimalDigitCount variable
      */
     public int getDecimalDigitCount() {
