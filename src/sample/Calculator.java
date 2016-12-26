@@ -116,10 +116,12 @@ public class Calculator {
      * Method which calculate value of 1/value
      */
     public void oneDivide(){
-        if(this.input.getDecimalDigitCount() == 0) {
-            this.input.setDecimalDigitCount(2);
-        }
         double value = this.input.getScreenValue();
+        double divided = 1 / value;
+
+        int len = this.input.getLengthOfValue(divided);
+        this.input.setDecimalDigitCount(len);
+
         this.input.setScreenValue(1 / value);
     }
 

@@ -157,4 +157,18 @@ public class InputNumber {
 
         return sign;
     }
+
+    public int getLengthOfValue(double value) {
+        int lengthOfValue = 0;
+
+        if((value - Math.ceil(value)) == 0){
+            lengthOfValue = 0;
+        } else {
+            String strDivided = String.valueOf(value);
+            lengthOfValue = strDivided.length();
+        }
+
+
+        return lengthOfValue;
+    }
 }
