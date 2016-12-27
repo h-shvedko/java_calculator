@@ -47,13 +47,28 @@ public class FXMLCalculatorController {
      */
     private String getStringFromNumber(double number) {
         String ret;
-        int numberAfterPoint = this.operation.getDecimalDigitCount();
+        int numberAfterPoint = 0;
+        boolean ifInput = this.operation.isIfInput();
+
+        if(ifInput){
+            numberAfterPoint = this.operation.getDecimalDigitCount();
+        } else {
+            numberAfterPoint = this.operation.getDecimalDigitCount() + this.operation.getDecimalSecondDigitCount();
+        }
 
         String format = "%." + numberAfterPoint + "f";
         ret = String.valueOf(String.format(format, number));
 
         return ret;
 
+    }
+
+    private boolean hasValuesAfterPoint(double number){
+        boolean ret = false;
+        if((number - Math.ceil(number)) != 0){
+            ret = true;
+        }
+        return ret;
     }
 
 

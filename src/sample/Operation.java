@@ -65,6 +65,14 @@ public class Operation {
      * Count of decimal values in number
      */
     private int decimalDigitCount;
+    /**
+     * Count of decimal values in number
+     */
+    private int decimalDigitSecondCount;
+    /**
+     * Variable which shows if we input number (true) or input operation (false)
+     */
+    private boolean ifInput = false;
 
     /**
      * Constructor of Operation class
@@ -84,43 +92,56 @@ public class Operation {
         switch (id) {
             case OPERATION_PLUS:
                 calculator.plus();
+                this.setIfInput(false);
                 break;
             case OPERATION_MINUS:
                 calculator.minus();
+                this.setIfInput(false);
                 break;
             case OPERATION_DIVIDE:
                 calculator.divide();
+                this.setIfInput(false);
                 break;
             case OPERATION_MULTIPLY:
                 calculator.multiply();
+                this.setIfInput(false);
                 break;
             case OPERATION_POINT:
                 inputNumber.point();
+                this.setIfInput(true);
                 break;
             case OPERATION_EQUAL:
                 calculator.equal();
+                this.setIfInput(false);
                 break;
             case OPERATION_CLEAR:
                 calculator.clear();
+                this.setIfInput(false);
                 break;
             case OPERATION_CHANGE_SIGN:
                 calculator.changeSign();
+                this.setIfInput(true);
                 break;
             case OPERATION_ONE_DIVIDE:
                 calculator.oneDivide();
+                this.setIfInput(false);
                 break;
             case OPERATION_SQRT:
                 calculator.sqrt();
+                this.setIfInput(false);
                 break;
             case OPERATION_DOUBLE_NULL:
                 inputNumber.input(0);
                 inputNumber.input(0);
+                this.setIfInput(true);
                 break;
             case OPERATION_BACKSPACE:
                 inputNumber.backspace();
+                this.setIfInput(true);
                 break;
             default:
                 inputNumber.input(Integer.parseInt(id));
+                this.setIfInput(true);
                 break;
         }
 
@@ -137,5 +158,31 @@ public class Operation {
     public int getDecimalDigitCount() {
         this.decimalDigitCount = this.inputNumber.getDecimalDigitCount();
         return decimalDigitCount;
+    }
+
+    /**
+     * Getter for decimalDigitSecondCount variable
+     *
+     * @return decimalDigitSecondCount - value which should be set to decimalDigitSecondCount variable
+     */
+    public int getDecimalSecondDigitCount() {
+        this.decimalDigitSecondCount = this.inputNumber.getDecimalDigitSecondCount();
+        return decimalDigitSecondCount;
+    }
+
+    /**
+     * Getter for variable ifInput
+     * @return
+     */
+    public boolean isIfInput() {
+        return ifInput;
+    }
+
+    /**
+     * Setter for variable ifInput
+     * @param ifInput
+     */
+    public void setIfInput(boolean ifInput) {
+        this.ifInput = ifInput;
     }
 }

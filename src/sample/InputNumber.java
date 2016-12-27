@@ -17,6 +17,10 @@ public class InputNumber {
      */
     private int decimalDigitCount;
     /**
+     * Count of decimal values in number
+     */
+    private int decimalDigitSecondCount;
+    /**
      * Instance of Calculator class
      */
     private Calculator calculator;
@@ -94,6 +98,15 @@ public class InputNumber {
     }
 
     /**
+     * Setter for decimalDigitSecondCount variable
+     *
+     * @param decimalDigitCount - value which should be set to decimalDigitSecondCount variable
+     */
+    public void setDecimalDigitSecondCount(int decimalDigitCount) {
+        this.decimalDigitSecondCount = decimalDigitCount;
+    }
+
+    /**
      * Getter for decimalDigitCount variable
      *
      * @return decimalDigitCount - value which should be set to decimalDigitCount variable
@@ -158,10 +171,16 @@ public class InputNumber {
         return sign;
     }
 
+    /**
+     * Method which returns count of digits after point
+     *
+     * @param value - number which we want check
+     * @return - int length of digits after point
+     */
     public int getLengthOfValue(double value) {
         int lengthOfValue = 0;
 
-        if((value - Math.ceil(value)) == 0){
+        if ((value - Math.ceil(value)) == 0) {
             lengthOfValue = 0;
         } else {
             String strDivided = String.valueOf(value);
@@ -170,5 +189,9 @@ public class InputNumber {
 
 
         return lengthOfValue;
+    }
+
+    public int getDecimalDigitSecondCount() {
+        return this.decimalDigitSecondCount;
     }
 }

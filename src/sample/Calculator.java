@@ -101,6 +101,7 @@ public class Calculator {
         this.memoryValue = 0;
         this.input.setIsDecimal(false);
         this.input.setDecimalDigitCount(0);
+        this.input.setDecimalDigitSecondCount(0);
         this.input.setScreenValue(0.0);
     }
 
@@ -166,6 +167,7 @@ public class Calculator {
         this.memoryValue = input.getScreenValue();
         input.setScreenValue(0.0);
         input.setIsDecimal(false);
+        input.setDecimalDigitSecondCount(input.getDecimalDigitCount());
         input.setDecimalDigitCount(0);
     }
 
